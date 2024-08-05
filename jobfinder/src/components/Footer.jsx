@@ -89,12 +89,10 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-          </div>
-          {/* Footer Wejed */}
-          
+          </div>   
         </div>
       </div>
-      {/* Footer Bottom Area */}
+      
       <div className="footer-bottom-area footer-bg">
         <div className="container">
           <div className="footer-border">

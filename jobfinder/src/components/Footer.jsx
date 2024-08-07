@@ -13,7 +13,7 @@ const Footer = () => {
                   <div className="footer-tittle">
                     <h4>About Us</h4>
                     <div className="footer-pera">
-                      <p>Heaven frucvitful doesn't cover lesser dvsays appear creeping seasons so behold.</p>
+                      <p>streamlined job portal that connects job seekers with top employers. Easily browse job listings, apply, and track your applications. Whether you're looking for freelance or full-time work, simplifies your job search and helps you find the right fit.</p>
                     </div>
                   </div>
                 </div>
@@ -25,10 +25,10 @@ const Footer = () => {
                   <h4>Contact Info</h4>
                   <ul>
                     <li>
-                      <p>Address: Your address goes here, your demo address.</p>
+                      <p>Address: Lahore</p>
                     </li>
-                    <li><a href="#">Phone: +8880 44338899</a></li>
-                    <li><a href="#">Email: info@colorlib.com</a></li>
+                    <li><a href="#">Phone: +92 333 2525802</a></li>
+                    <li><a href="#">Email: meharaziz.1614@gmail.com</a></li>
                   </ul>
                 </div>
               </div>
@@ -52,7 +52,7 @@ const Footer = () => {
                 <div className="footer-tittle">
                   <h4>Newsletter</h4>
                   <div className="footer-pera footer-pera2">
-                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+                    <p>Join for updates.</p>
                   </div>
                   {/* Form */}
                   <div className="footer-form">

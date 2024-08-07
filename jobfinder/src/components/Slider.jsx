@@ -1,4 +1,25 @@
 import React from 'react';
+import Select from 'react-select';
+
+const locationOptions = [
+    { value: 'bd', label: 'Location BD' },
+    { value: 'pk', label: 'Location PK' },
+    { value: 'us', label: 'Location US' },
+    { value: 'uk', label: 'Location UK' }
+];
+
+const customStyles = {
+    control: (provided) => ({
+        ...provided,
+        margin: '10px 0',
+        paddingTop: '8px',
+        border: 'none',
+    }),
+    menu: (provided) => ({
+        ...provided,
+        zIndex: 9999
+    })
+};
 
 const Slider = () => (
   <div className="slider-area">
@@ -20,12 +41,11 @@ const Slider = () => (
                 </div>
                 <div className="select-form">
                   <div className="select-itms">
-                    <select name="select" id="select1">
-                      <option value="">Location BD</option>
-                      <option value="">Location PK</option>
-                      <option value="">Location US</option>
-                      <option value="">Location UK</option>
-                    </select>
+                    <Select
+                      options={locationOptions}
+                      placeholder="Select Location"
+                      styles={customStyles}
+                    />
                   </div>
                 </div>
                 <div className="search-form">

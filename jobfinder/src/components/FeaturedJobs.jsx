@@ -7,9 +7,9 @@ import jobList4 from '../assets/images/job-list4.png';
 const FeaturedJobs = () => {
   const jobs = [
     { id: 1, title: 'Digital Marketer', company: 'Creative Agency', location: 'Athens, Greece', salary: '$3500 - $4000', image: jobList1 },
-    { id: 2, title: 'Digital Marketer', company: 'Creative Agency', location: 'Athens, Greece', salary: '$3500 - $4000', image: jobList2 },
-    { id: 3, title: 'Digital Marketer', company: 'Creative Agency', location: 'Athens, Greece', salary: '$3500 - $4000', image: jobList3 },
-    { id: 4, title: 'Digital Marketer', company: 'Creative Agency', location: 'Athens, Greece', salary: '$3500 - $4000', image: jobList4 },
+    { id: 2, title: 'Senior Developer', company: 'IT House', location: 'NewYork, US', salary: '$3500 - $4000', image: jobList2 },
+    { id: 3, title: 'Digital Marketer', company: 'Creative Agency', location: 'Bosso, Spain', salary: '$3500 - $4000', image: jobList3 },
+    { id: 4, title: 'Junior Python Developer', company: 'IT House ', location: 'Islamabad, Pakistan', salary: '$3500 - $4000', image: jobList4 },
   ];
 
   return (

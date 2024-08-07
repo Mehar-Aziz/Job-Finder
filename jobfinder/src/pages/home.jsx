@@ -3,6 +3,7 @@ import React from 'react';
 import Slider from '../components/Slider';
 import OurServices from '../components/Services';
 import CvArea from '../components/CVarea';
+import FeaturedJobs from '../components/FeaturedJobs';
 
 const Home = () => {
     return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Slider />
             <OurServices />
             <CvArea />
+            <FeaturedJobs />
         </div>
     );
 };

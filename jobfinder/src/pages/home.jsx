@@ -5,6 +5,7 @@ import OurServices from '../components/Services';
 import CvArea from '../components/CVarea';
 import FeaturedJobs from '../components/FeaturedJobs';
 import Testimonial from '../components/Testimonal';
+import BlogArea from '../components/OurProjects';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <CvArea />
             <FeaturedJobs />
             <Testimonial />
+            <BlogArea />
         </div>
     );
 };

@@ -1,15 +1,15 @@
 import React from 'react';
 
 const services = [
-  { icon: 'flaticon-tour', label: 'Design & Creative', link: 'job_listing.html', count: 653 },
-  { icon: 'flaticon-cms', label: 'Design & Development', link: 'job_listing.html', count: 658 },
-  { icon: 'flaticon-report', label: 'Sales & Marketing', link: 'job_listing.html', count: 658 },
-  { icon: 'flaticon-app', label: 'Mobile Application', link: 'job_listing.html', count: 658 },
-  { icon: 'flaticon-helmet', label: 'Construction', link: 'job_listing.html', count: 658 },
-  { icon: 'flaticon-high-tech', label: 'Information Technology', link: 'job_listing.html', count: 658 },
-  { icon: 'flaticon-real-estate', label: 'Real Estate', link: 'job_listing.html', count: 658 },
-  { icon: 'flaticon-content', label: 'Content Writer', link: 'job_listing.html', count: 658 }
-];
+    { icon: 'fa fa-suitcase', label: 'Design & Creative', link: 'job_listing.html', count: 653 },
+    { icon: 'fa fa-cogs', label: 'Design & Development', link: 'job_listing.html', count: 658 },
+    { icon: 'fa fa-file-alt', label: 'Sales & Marketing', link: 'job_listing.html', count: 658 },
+    { icon: 'fa fa-mobile-alt', label: 'Mobile Application', link: 'job_listing.html', count: 658 },
+    { icon: 'fa fa-hard-hat', label: 'Construction', link: 'job_listing.html', count: 658 },
+    { icon: 'fa fa-laptop-code', label: 'Information Technology', link: 'job_listing.html', count: 658 },
+    { icon: 'fa fa-building', label: 'Real Estate', link: 'job_listing.html', count: 658 },
+    { icon: 'fa fa-pencil-alt', label: 'Content Writer', link: 'job_listing.html', count: 658 }
+  ];
 
 const OurServices = () => (
   <div className="our-services section-pad-t30">

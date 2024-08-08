@@ -1,4 +1,5 @@
 import React from "react";
+import aboutImg from '../assets/images/about.jpg';
 
 const AboutUs = () => {
   return (
@@ -31,7 +32,7 @@ const AboutUs = () => {
           </div>
           <div className="col-xl-6 col-lg-6">
             <div className="support-location-img">
-              <img src="assets/img/service/support-img.jpg" alt="" />
+              <img src={aboutImg} alt="" />
               <div className="support-img-cap text-center">
                 <p>Since</p>
                 <span>1994</span>

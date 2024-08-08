@@ -1,5 +1,6 @@
-import React from 'react';
-import jobimg from '../assets/images/job-list1.png';
+import React from "react";
+import jobimg from "../assets/images/job-list1.png";
+import { Link } from "react-router-dom";
 
 const JobListingArea = () => {
   return (
@@ -12,7 +13,12 @@ const JobListingArea = () => {
               <div className="col-12">
                 <div className="small-section-tittle2 mb-45">
                   <div className="ion">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="20px" height="12px">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
+                      width="20px"
+                      height="12px"
+                    >
                       <path
                         fillRule="evenodd"
                         fill="rgb(27, 207, 107)"
@@ -24,14 +30,13 @@ const JobListingArea = () => {
                 </div>
               </div>
             </div>
-            {/* Job Category Listing start */}
+
             <div className="job-category-listing mb-50">
-              {/* single one */}
               <div className="single-listing">
                 <div className="small-section-tittle2">
                   <h4>Job Category</h4>
                 </div>
-                {/* Select job items start */}
+
                 <div className="select-job-items2">
                   <select name="select">
                     <option value="">All Category</option>
@@ -41,8 +46,7 @@ const JobListingArea = () => {
                     <option value="">Category 4</option>
                   </select>
                 </div>
-                {/* Select job items End */}
-                {/* select-Categories start */}
+
                 <div className="select-Categories pt-80 pb-50">
                   <div className="small-section-tittle2">
                     <h4>Job Type</h4>
@@ -68,14 +72,13 @@ const JobListingArea = () => {
                     <span className="checkmark"></span>
                   </label>
                 </div>
-                {/* select-Categories End */}
               </div>
-              {/* single two */}
+
               <div className="single-listing">
                 <div className="small-section-tittle2">
                   <h4>Job Location</h4>
                 </div>
-                {/* Select job items start */}
+
                 <div className="select-job-items2">
                   <select name="select">
                     <option value="">Anywhere</option>
@@ -85,7 +88,7 @@ const JobListingArea = () => {
                     <option value="">China</option>
                   </select>
                 </div>
-                
+
                 <div className="select-Categories pt-80 pb-50">
                   <div className="small-section-tittle2">
                     <h4>Experience</h4>
@@ -111,11 +114,9 @@ const JobListingArea = () => {
                     <span className="checkmark"></span>
                   </label>
                 </div>
-                
               </div>
-             
+
               <div className="single-listing">
-                
                 <div className="select-Categories pb-50">
                   <div className="small-section-tittle2">
                     <h4>Posted Within</h4>
@@ -152,7 +153,6 @@ const JobListingArea = () => {
                   </label>
                 </div>
               </div>
-             
             </div>
           </div>
           <div className="col-xl-9 col-lg-9 col-md-8">
@@ -174,12 +174,16 @@ const JobListingArea = () => {
                     </div>
                   </div>
                 </div>
-               
+
                 <div className="single-job-items mb-30">
                   <div className="job-items">
                     <div className="company-img">
                       <a href="#">
-                        <img src={jobimg} style={{ width: '100px', height: 'auto' }} alt="" />
+                        <img
+                          src={jobimg}
+                          style={{ width: "100px", height: "auto" }}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="job-tittle job-tittle2">
@@ -189,23 +193,28 @@ const JobListingArea = () => {
                       <ul>
                         <li>Creative Agency</li>
                         <li>
-                          <i className="fas fa-map-marker-alt"></i>Athens, Greece
+                          <i className="fas fa-map-marker-alt"></i>Athens,
+                          Greece
                         </li>
                         <li>$3500 - $4000</li>
                       </ul>
                     </div>
                   </div>
                   <div className="items-link items-link2 f-right">
-                    <a href="job_details.html">Full Time</a>
+                    <Link to={"/jobdetail"}>Full Time</Link>
                     <span>7 hours ago</span>
                   </div>
                 </div>
-                
+
                 <div className="single-job-items mb-30">
                   <div className="job-items">
                     <div className="company-img">
                       <a href="#">
-                        <img src={jobimg} style={{ width: '100px', height: 'auto' }} alt="" />
+                        <img
+                          src={jobimg}
+                          style={{ width: "100px", height: "auto" }}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="job-tittle job-tittle2">
@@ -215,23 +224,28 @@ const JobListingArea = () => {
                       <ul>
                         <li>Creative Agency</li>
                         <li>
-                          <i className="fas fa-map-marker-alt"></i>Athens, Greece
+                          <i className="fas fa-map-marker-alt"></i>Athens,
+                          Greece
                         </li>
                         <li>$3500 - $4000</li>
                       </ul>
                     </div>
                   </div>
                   <div className="items-link items-link2 f-right">
-                    <a href="job_details.html">Full Time</a>
+                    <Link to={"/jobdetail"}>Full Time</Link>
                     <span>7 hours ago</span>
                   </div>
                 </div>
-                {/* single-job-content */}
+
                 <div className="single-job-items mb-30">
                   <div className="job-items">
                     <div className="company-img">
                       <a href="#">
-                        <img src={jobimg} style={{ width: '100px', height: 'auto' }} alt="" />
+                        <img
+                          src={jobimg}
+                          style={{ width: "100px", height: "auto" }}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="job-tittle job-tittle2">
@@ -241,23 +255,28 @@ const JobListingArea = () => {
                       <ul>
                         <li>Creative Agency</li>
                         <li>
-                          <i className="fas fa-map-marker-alt"></i>Athens, Greece
+                          <i className="fas fa-map-marker-alt"></i>Athens,
+                          Greece
                         </li>
                         <li>$3500 - $4000</li>
                       </ul>
                     </div>
                   </div>
                   <div className="items-link items-link2 f-right">
-                    <a href="job_details.html">Full Time</a>
+                    <Link to={"/jobdetail"}>Full Time</Link>
                     <span>7 hours ago</span>
                   </div>
                 </div>
-                {/* single-job-content */}
+
                 <div className="single-job-items mb-30">
                   <div className="job-items">
                     <div className="company-img">
                       <a href="#">
-                        <img src={jobimg} style={{ width: '100px', height: 'auto' }} alt="" />
+                        <img
+                          src={jobimg}
+                          style={{ width: "100px", height: "auto" }}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="job-tittle job-tittle2">
@@ -267,23 +286,28 @@ const JobListingArea = () => {
                       <ul>
                         <li>Creative Agency</li>
                         <li>
-                          <i className="fas fa-map-marker-alt"></i>Athens, Greece
+                          <i className="fas fa-map-marker-alt"></i>Athens,
+                          Greece
                         </li>
                         <li>$3500 - $4000</li>
                       </ul>
                     </div>
                   </div>
                   <div className="items-link items-link2 f-right">
-                    <a href="job_details.html">Full Time</a>
+                    <Link to={"/jobdetail"}>Full Time</Link>
                     <span>7 hours ago</span>
                   </div>
                 </div>
-                {/* single-job-content */}
+
                 <div className="single-job-items mb-30">
                   <div className="job-items">
                     <div className="company-img">
                       <a href="#">
-                        <img src={jobimg} style={{ width: '100px', height: 'auto' }} alt="" />
+                        <img
+                          src={jobimg}
+                          style={{ width: "100px", height: "auto" }}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="job-tittle job-tittle2">
@@ -293,23 +317,28 @@ const JobListingArea = () => {
                       <ul>
                         <li>Creative Agency</li>
                         <li>
-                          <i className="fas fa-map-marker-alt"></i>Athens, Greece
+                          <i className="fas fa-map-marker-alt"></i>Athens,
+                          Greece
                         </li>
                         <li>$3500 - $4000</li>
                       </ul>
                     </div>
                   </div>
                   <div className="items-link items-link2 f-right">
-                    <a href="job_details.html">Full Time</a>
+                    <Link to={"/jobdetail"}>Full Time</Link>
                     <span>7 hours ago</span>
                   </div>
                 </div>
-                {/* single-job-content */}
+
                 <div className="single-job-items mb-30">
                   <div className="job-items">
                     <div className="company-img">
                       <a href="#">
-                        <img src={jobimg} style={{ width: '100px', height: 'auto' }} alt="" />
+                        <img
+                          src={jobimg}
+                          style={{ width: "100px", height: "auto" }}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="job-tittle job-tittle2">
@@ -319,23 +348,28 @@ const JobListingArea = () => {
                       <ul>
                         <li>Creative Agency</li>
                         <li>
-                          <i className="fas fa-map-marker-alt"></i>Athens, Greece
+                          <i className="fas fa-map-marker-alt"></i>Athens,
+                          Greece
                         </li>
                         <li>$3500 - $4000</li>
                       </ul>
                     </div>
                   </div>
                   <div className="items-link items-link2 f-right">
-                    <a href="job_details.html">Full Time</a>
+                    <Link to={"/jobdetail"}>Full Time</Link>
                     <span>7 hours ago</span>
                   </div>
                 </div>
-                {/* single-job-content */}
+
                 <div className="single-job-items mb-30">
                   <div className="job-items">
                     <div className="company-img">
                       <a href="#">
-                        <img src={jobimg} style={{ width: '100px', height: 'auto' }} alt="" />
+                        <img
+                          src={jobimg}
+                          style={{ width: "100px", height: "auto" }}
+                          alt=""
+                        />
                       </a>
                     </div>
                     <div className="job-tittle job-tittle2">
@@ -345,18 +379,18 @@ const JobListingArea = () => {
                       <ul>
                         <li>Creative Agency</li>
                         <li>
-                          <i className="fas fa-map-marker-alt"></i>Athens, Greece
+                          <i className="fas fa-map-marker-alt"></i>Athens,
+                          Greece
                         </li>
                         <li>$3500 - $4000</li>
                       </ul>
                     </div>
                   </div>
                   <div className="items-link items-link2 f-right">
-                    <a href="job_details.html">Full Time</a>
+                    <Link to={"/jobdetail"}>Full Time</Link>
                     <span>7 hours ago</span>
                   </div>
                 </div>
-                
               </div>
             </section>
           </div>

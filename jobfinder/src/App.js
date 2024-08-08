@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import AboutPage from "./pages/AboutUs";
 import Services from "./pages/Services";
 import JobListing from "./pages/JobListing";
+import JobDetails from "./pages/JobDetails";
 
 function App() {
   return(
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" Component={AboutPage}  />
           <Route path="/services" Component={Services} />
           <Route path="/joblist" Component={JobListing} />
+          <Route path="/jobdetail" Component={JobDetails} />
         </Routes>
         <Footer />
       </div>

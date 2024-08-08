@@ -19,8 +19,8 @@ function ContactForm() {
                 id="message"
                 cols="30"
                 rows="9"
-                onFocus={() => (this.placeholder = '')}
-                onBlur={() => (this.placeholder = 'Enter Message')}
+                onFocus={(e) => (e.target.placeholder = '')}
+                onBlur={(e) => (e.target.placeholder = 'Enter Message')}
                 placeholder="Enter Message"
               />
             </div>
@@ -32,8 +32,8 @@ function ContactForm() {
                 name="name"
                 id="name"
                 type="text"
-                onFocus={() => (this.placeholder = '')}
-                onBlur={() => (this.placeholder = 'Enter your name')}
+                onFocus={(e) => (e.target.placeholder = '')}
+                onBlur={(e) => (e.target.placeholder = 'Enter your name')}
                 placeholder="Enter your name"
               />
             </div>
@@ -45,8 +45,8 @@ function ContactForm() {
                 name="email"
                 id="email"
                 type="email"
-                onFocus={() => (this.placeholder = '')}
-                onBlur={() => (this.placeholder = 'Enter email address')}
+                onFocus={(e) => (e.target.placeholder = '')}
+                onBlur={(e) => (e.target.placeholder = 'Enter email address')}
                 placeholder="Email"
               />
             </div>
@@ -58,8 +58,8 @@ function ContactForm() {
                 name="subject"
                 id="subject"
                 type="text"
-                onFocus={() => (this.placeholder = '')}
-                onBlur={() => (this.placeholder = 'Enter Subject')}
+                onFocus={(e) => (e.target.placeholder = '')}
+                onBlur={(e) => (e.target.placeholder = 'Enter Subject')}
                 placeholder="Enter Subject"
               />
             </div>

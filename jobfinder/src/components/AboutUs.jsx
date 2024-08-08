@@ -14,15 +14,10 @@ const AboutUs = () => {
               </div>
               <div className="support-caption">
                 <p className="pera-top">
-                  Mollit anim laborum duis au dolor in voluptate velit ess
-                  cillum dolore eu lore dsu quality mollit anim laborumuis au
-                  dolor in voluptate velit cillum.
+                At Job Finder, we're dedicated to connecting skilled individuals with their dream jobs. We understand the importance of finding the right fit and the impact it has on your career journey.
                 </p>
                 <p>
-                  Mollit anim laborum.Duis aute irufg dhjkolohr in re voluptate
-                  velit esscillumlore eu quife nrulla parihatur. Excghcepteur
-                  signjnt occa cupidatat non inulpadeserunt mollit aboru. temnthp
-                  incididbnt ut labore mollit anim laborum suis aute.
+                We believe in empowering professionals by offering diverse opportunities that cater to various skills and experiences. Whether you're a seasoned expert or a fresh graduate, our job portal provides the resources and support needed to succeed in today's competitive market.
                 </p>
                 <a href="about.html" className="btn post-btn">
                   Post a job
@@ -32,7 +27,7 @@ const AboutUs = () => {
           </div>
           <div className="col-xl-6 col-lg-6">
             <div className="support-location-img">
-              <img src={aboutImg} alt="" />
+              <img src={aboutImg} alt="" style={{ width: '500px', height: '650px' }}/>
               <div className="support-img-cap text-center">
                 <p>Since</p>
                 <span>1994</span>

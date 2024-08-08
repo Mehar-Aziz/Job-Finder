@@ -28,7 +28,7 @@ const Navbar = () => {
                                         <nav className="d-none d-lg-block">
                                             <ul id="navigation">
                                                 <li><a href="index.html">Home</a></li>
-                                                <li><a href="job_listing.html">Find a Job</a></li>
+                                                <li><Link to="/joblist">Find a Job</Link></li>
                                                 <li><Link to="/about">About</Link></li>
                                                 <li><Link to="/services">Services</Link></li>
                                                 

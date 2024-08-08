@@ -30,14 +30,8 @@ const Navbar = () => {
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="job_listing.html">Find a Job</a></li>
                                                 <li><Link to="/about">About</Link></li>
-                                                <li><a href="#">Page</a>
-                                                    <ul className="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="single-blog.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Elements</a></li>
-                                                        <li><a href="job_details.html">Job Details</a></li>
-                                                    </ul>
-                                                </li>
+                                                <li><Link to="/services">Services</Link></li>
+                                                
                                                 <li><Link to="/contact">Contact</Link></li>
                                             </ul>
                                         </nav>

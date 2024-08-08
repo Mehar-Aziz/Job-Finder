@@ -29,7 +29,7 @@ const Navbar = () => {
                                             <ul id="navigation">
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="job_listing.html">Find a Job</a></li>
-                                                <li><a href="about">About</a></li>
+                                                <li><Link to="/about">About</Link></li>
                                                 <li><a href="#">Page</a>
                                                     <ul className="submenu">
                                                         <li><a href="blog.html">Blog</a></li>

@@ -4,14 +4,9 @@ function Sidebar() {
   return (
     <nav id="sidebar" className="sidebar js-sidebar">
       <div className="sidebar-content js-simplebar">
-        <a className="sidebar-brand" href="index.html">
-          <span className="align-middle">Profile</span>
-        </a>
+
 
         <ul className="sidebar-nav">
-          <li className="sidebar-header">
-            Pages
-          </li>
 
           <li className="sidebar-item active">
             <a className="sidebar-link" href="index.html">
@@ -22,18 +17,6 @@ function Sidebar() {
           <li className="sidebar-item">
             <a className="sidebar-link" href="pages-profile.html">
               <i className="align-middle" data-feather="user"></i> <span className="align-middle">Profile</span>
-            </a>
-          </li>
-
-          <li className="sidebar-item">
-            <a className="sidebar-link" href="pages-sign-in.html">
-              <i className="align-middle" data-feather="log-in"></i> <span className="align-middle">Sign In</span>
-            </a>
-          </li>
-
-          <li className="sidebar-item">
-            <a className="sidebar-link" href="pages-sign-up.html">
-              <i className="align-middle" data-feather="user-plus"></i> <span className="align-middle">Sign Up</span>
             </a>
           </li>
         </ul>

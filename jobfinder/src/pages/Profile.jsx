@@ -5,6 +5,9 @@ import Sidebar from '../components/Sidebar';
 const Profile = () => {
   return (
     <div>
+        <h2>welcome to profile</h2>
+        <br />
+        <br />
         <Sidebar/>
       <ProfilePage />
     </div>

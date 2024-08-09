@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutUs";
 import Services from "./pages/Services";
 import JobListing from "./pages/JobListing";
 import JobDetails from "./pages/JobDetails";
+import LoginPage from "./pages/Login";
 
 function App() {
   return(
@@ -16,6 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact Component={Home}  />
+          <Route path="/login" Component={LoginPage} />
           <Route path="/contact" Component={Contact}  />
           <Route path="/about" Component={AboutPage}  />
           <Route path="/services" Component={Services} />

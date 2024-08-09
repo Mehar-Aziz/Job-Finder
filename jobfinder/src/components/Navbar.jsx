@@ -39,7 +39,7 @@ const Navbar = () => {
 
                                     <div className="header-btn d-none f-right d-lg-block">
                                         <a href="#" className="btn head-btn1">Register</a>
-                                        <a href="#" className="btn head-btn2">Login</a>
+                                        <Link to="/login" className="btn head-btn2">Login</Link>
                                     </div>
                                 </div>
                             </div>

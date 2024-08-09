@@ -6445,3 +6445,11 @@ form.search-box .search-form a {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+.forgot {
+  
+  font-size: 13px;
+}
+.forgot:hover{
+  cursor: pointer;
+  color: #fb246a;
+}

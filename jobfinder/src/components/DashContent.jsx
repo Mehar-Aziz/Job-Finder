@@ -5,14 +5,13 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import feather from "feather-icons";
 
-// Register all necessary Chart.js components
 Chart.register(...registerables);
 
 const Content = () => {
   const [startDate, setStartDate] = useState(new Date());
 
   useEffect(() => {
-    feather.replace(); // Replace placeholders with Feather icons
+    feather.replace(); 
   }, []);
 
   const lineChartData = {
@@ -32,12 +31,12 @@ const Content = () => {
     ],
     datasets: [
       {
-        label: "Recent Movement",
+        label: "Projects Completion",
         data: [
           65, 59, 80, 81, 56, 55, 40, 42, 50, 60, 70, 78, 90, 45, 67, 89, 95,
         ],
         fill: false,
-        borderColor: "rgba(75,192,192,1)",
+        borderColor: '#1f2b7b',
       },
     ],
   };
@@ -58,7 +57,7 @@ const Content = () => {
                     <div className="card-body">
                       <div className="row">
                         <div className="col mt-0">
-                          <h5 className="card-title">Sales</h5>
+                          <h5 className="card-title">Task Completed</h5>
                         </div>
                         <div className="col-auto">
                           <div className="stat text-primary">
@@ -66,12 +65,12 @@ const Content = () => {
                           </div>
                         </div>
                       </div>
-                      <h1 className="mt-1 mb-3">2.382</h1>
+                      <h1 className="mt-1 mb-3">93</h1>
                       <div className="mb-0">
                         <span className="text-danger">
                           <i className="mdi mdi-arrow-bottom-right"></i> -3.65%
                         </span>
-                        <span className="text-muted">Since last week</span>
+                        <span className="text-muted">Since last year</span>
                       </div>
                     </div>
                   </div>
@@ -188,8 +187,8 @@ const Content = () => {
                 <tbody>
                   <tr>
                     <td>Project Apollo</td>
-                    <td className="d-none d-xl-table-cell">01/01/2023</td>
-                    <td className="d-none d-xl-table-cell">31/06/2023</td>
+                    <td className="d-none d-xl-table-cell">01/01/2024</td>
+                    <td className="d-none d-xl-table-cell">31/06/2024</td>
                     <td>
                       <span className="badge bg-success">Done</span>
                     </td>
@@ -197,8 +196,8 @@ const Content = () => {
                   </tr>
                   <tr>
                     <td>Project Fireball</td>
-                    <td className="d-none d-xl-table-cell">01/01/2023</td>
-                    <td className="d-none d-xl-table-cell">31/06/2023</td>
+                    <td className="d-none d-xl-table-cell">01/01/2024</td>
+                    <td className="d-none d-xl-table-cell">31/06/2024</td>
                     <td>
                       <span className="badge bg-danger">Cancelled</span>
                     </td>
@@ -206,8 +205,8 @@ const Content = () => {
                   </tr>
                   <tr>
                     <td>Project Hades</td>
-                    <td className="d-none d-xl-table-cell">01/01/2023</td>
-                    <td className="d-none d-xl-table-cell">31/06/2023</td>
+                    <td className="d-none d-xl-table-cell">01/01/2024</td>
+                    <td className="d-none d-xl-table-cell">31/06/2024</td>
                     <td>
                       <span className="badge bg-success">Done</span>
                     </td>
@@ -215,8 +214,8 @@ const Content = () => {
                   </tr>
                   <tr>
                     <td>Project Nitro</td>
-                    <td className="d-none d-xl-table-cell">01/01/2023</td>
-                    <td className="d-none d-xl-table-cell">31/06/2023</td>
+                    <td className="d-none d-xl-table-cell">01/01/2024</td>
+                    <td className="d-none d-xl-table-cell">31/06/2024</td>
                     <td>
                       <span className="badge bg-warning">In progress</span>
                     </td>
@@ -224,8 +223,8 @@ const Content = () => {
                   </tr>
                   <tr>
                     <td>Project Phoenix</td>
-                    <td className="d-none d-xl-table-cell">01/01/2023</td>
-                    <td className="d-none d-xl-table-cell">31/06/2023</td>
+                    <td className="d-none d-xl-table-cell">01/01/2024</td>
+                    <td className="d-none d-xl-table-cell">31/06/2024</td>
                     <td>
                       <span className="badge bg-success">Done</span>
                     </td>
@@ -233,8 +232,8 @@ const Content = () => {
                   </tr>
                   <tr>
                     <td>Project X</td>
-                    <td className="d-none d-xl-table-cell">01/01/2023</td>
-                    <td className="d-none d-xl-table-cell">31/06/2023</td>
+                    <td className="d-none d-xl-table-cell">01/01/2024</td>
+                    <td className="d-none d-xl-table-cell">31/06/2024</td>
                     <td>
                       <span className="badge bg-success">Done</span>
                     </td>

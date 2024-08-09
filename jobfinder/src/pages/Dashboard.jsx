@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from '../components/Sidebar';
+import Content from '../components/DashContent';
 
 const Dashboard = () => {
   return (
@@ -7,6 +8,7 @@ const Dashboard = () => {
       <h2>Dashboard</h2>
       <p>Overview of user activity and submissions</p>
       <Sidebar/>
+      <Content/>
     </div>
   );
 };

@@ -11,6 +11,7 @@ import JobDetails from "./pages/JobDetails";
 import LoginPage from "./pages/Login";
 import RegistrationForm from "./pages/Registration";
 import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" exact Component={Home}  />
           <Route path="/login" Component={LoginPage} />
           <Route path="/dashboard" Component={Dashboard} />
+          <Route path="/profile" Component={Profile} />
           <Route path="/registration" Component={RegistrationForm} />
           <Route path="/contact" Component={Contact}  />
           <Route path="/about" Component={AboutPage}  />

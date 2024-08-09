@@ -1,4 +1,5 @@
 import React from 'react';
+import NotificationDropdown from './Notification';
 
 function Sidebar() {
   return (
@@ -19,6 +20,7 @@ function Sidebar() {
               <i className="align-middle" data-feather="user"></i> <span className="align-middle">Profile</span>
             </a>
           </li>
+          <NotificationDropdown/>
         </ul>
       </div>
     </nav>

@@ -9,6 +9,7 @@ import Services from "./pages/Services";
 import JobListing from "./pages/JobListing";
 import JobDetails from "./pages/JobDetails";
 import LoginPage from "./pages/Login";
+import RegistrationForm from "./pages/Registration";
 
 function App() {
   return(
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" exact Component={Home}  />
           <Route path="/login" Component={LoginPage} />
+          <Route path="/registration" Component={RegistrationForm} />
           <Route path="/contact" Component={Contact}  />
           <Route path="/about" Component={AboutPage}  />
           <Route path="/services" Component={Services} />

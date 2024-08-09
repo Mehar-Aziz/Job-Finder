@@ -10,6 +10,8 @@ import JobListing from "./pages/JobListing";
 import JobDetails from "./pages/JobDetails";
 import LoginPage from "./pages/Login";
 import RegistrationForm from "./pages/Registration";
+import Dashboard from "./pages/Dashboard";
+
 
 function App() {
   return(
@@ -19,12 +21,14 @@ function App() {
         <Routes>
           <Route path="/" exact Component={Home}  />
           <Route path="/login" Component={LoginPage} />
+          <Route path="/dashboard" Component={Dashboard} />
           <Route path="/registration" Component={RegistrationForm} />
           <Route path="/contact" Component={Contact}  />
           <Route path="/about" Component={AboutPage}  />
           <Route path="/services" Component={Services} />
           <Route path="/joblist" Component={JobListing} />
           <Route path="/jobdetail" Component={JobDetails} />
+  
         </Routes>
         <Footer />
       </div>

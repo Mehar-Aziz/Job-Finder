@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -33,9 +34,11 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <div className='forgot'>Forgot Password?</div>
+            <div className='forgot'>Forgot</div>
           </div>
-          <button type="submit" className="btn">Login</button>
+          <Link to="/dashboard">
+    <button type="submit" className="btn">Login</button>
+  </Link>
         </form>
       </div>
     </div>

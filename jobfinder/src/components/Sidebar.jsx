@@ -1,5 +1,6 @@
 import React from 'react';
 import NotificationDropdown from './Notification';
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
   return (
@@ -17,7 +18,8 @@ function Sidebar() {
 
           <li className="sidebar-item">
             <a className="sidebar-link" href="pages-profile.html">
-              <i className="align-middle" data-feather="user"></i> <span className="align-middle">Profile</span>
+              <i className="align-middle" data-feather="user"></i> 
+              <Link to="/profile"><span className="align-middle">Profile</span></Link>
             </a>
           </li>
           <NotificationDropdown/>

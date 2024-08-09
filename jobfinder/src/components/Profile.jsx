@@ -20,8 +20,8 @@ const ProfilePage = () => {
                   width="128"
                   height="128"
                 />
-                <h5 className="card-title mb-0">Christina Mason</h5>
-                <div className="text-muted mb-2">Lead Developer</div>
+                <h5 className="card-title mb-0">MEHAR AZIZ</h5>
+                <div className="text-muted mb-2">MERN Stack Developer</div>
                 <div>
                 </div>
               </div>
@@ -65,21 +65,21 @@ const ProfilePage = () => {
                       data-feather="home"
                       className="feather-sm me-1"
                     ></span>{" "}
-                    Lives in <a href="#">San Francisco, SA</a>
+                    Lives in <a href="#">Lahore, Pakistan</a>
                   </li>
                   <li className="mb-1">
                     <span
                       data-feather="briefcase"
                       className="feather-sm me-1"
                     ></span>{" "}
-                    Works at <a href="#">GitHub</a>
+                    Works at <a href="#">InternnCarft</a>
                   </li>
                   <li className="mb-1">
                     <span
                       data-feather="map-pin"
                       className="feather-sm me-1"
                     ></span>{" "}
-                    From <a href="#">Boston</a>
+                    From <a href="#">Pakistan</a>
                   </li>
                 </ul>
               </div>
@@ -88,7 +88,7 @@ const ProfilePage = () => {
                 <h5 className="h6 card-title">Elsewhere</h5>
                 <ul className="list-unstyled mb-0">
                   <li className="mb-1">
-                    <a href="#">staciehall.co</a>
+                    <a href="#">GitHub</a>
                   </li>
                   <li className="mb-1">
                     <a href="#">Twitter</a>

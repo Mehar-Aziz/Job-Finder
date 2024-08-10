@@ -37,8 +37,8 @@ function Contact() {
               <i className="ti-home"></i>
             </span>
             <div className="media-body">
-              <h3>Buttonwood, California.</h3>
-              <p>Rosemead, CA 91770</p>
+              <h3>Lahore, Pakistan.</h3>
+              <p>Asia, 91770</p>
             </div>
           </div>
           <div className="media contact-info">
@@ -46,7 +46,7 @@ function Contact() {
               <i className="ti-tablet"></i>
             </span>
             <div className="media-body">
-              <h3>+1 253 565 2365</h3>
+              <h3>+92 333 2525802</h3>
               <p>Mon to Fri 9am to 6pm</p>
             </div>
           </div>
@@ -55,7 +55,7 @@ function Contact() {
               <i className="ti-email"></i>
             </span>
             <div className="media-body">
-              <h3>support@colorlib.com</h3>
+              <h3>support@internncarft.com</h3>
               <p>Send us your query anytime!</p>
             </div>
           </div>

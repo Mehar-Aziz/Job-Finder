@@ -1,4 +1,6 @@
 import React from "react";
+import jobimg from "../assets/images/job-list2.png";
+import hero from "../assets/images/contact.jpg";
 
 const JobDetails = () => {
   return (
@@ -6,7 +8,7 @@ const JobDetails = () => {
       <div className="slider-area">
         <div
           className="single-slider section-overly slider-height2 d-flex align-items-center"
-          style={{ backgroundImage: "url(assets/img/hero/about.jpg)" }}
+          style={{ backgroundImage: `url(${hero})` }}
         >
           <div className="container">
             <div className="row">
@@ -32,17 +34,21 @@ const JobDetails = () => {
                 <div className="job-items">
                   <div className="company-img company-img-details">
                     <a href="#">
-                      <img src="assets/img/icon/job-list1.png" alt="Company" />
+                      <img
+                        src={jobimg}
+                        alt="Company"
+                        style={{ width: "50%", height: "auto" }}
+                      />
                     </a>
                   </div>
                   <div className="job-tittle">
                     <a href="#">
-                      <h4>Digital Marketer</h4>
+                      <h4>UI/UX Designer</h4>
                     </a>
                     <ul>
-                      <li>Creative Agency</li>
+                      <li>IT Consultant</li>
                       <li>
-                        <i className="fas fa-map-marker-alt"></i>Athens, Greece
+                        <i className="fas fa-map-marker-alt"></i>Lahore, Pakistan
                       </li>
                       <li>$3500 - $4000</li>
                     </ul>
@@ -134,20 +140,20 @@ const JobDetails = () => {
                 <div className="small-section-tittle">
                   <h4>Company Information</h4>
                 </div>
-                <span>Colorlib</span>
+                <span>InternnCarft</span>
                 <p>
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
                 </p>
                 <ul>
                   <li>
-                    Name: <span>Colorlib</span>
+                    Name: <span>InternnCarft</span>
                   </li>
                   <li>
-                    Web: <span>colorlib.com</span>
+                    Web: <span>InternnCraft.com</span>
                   </li>
                   <li>
-                    Email: <span>carrier.colorlib@gmail.com</span>
+                    Email: <span>carrier.internncarft@gmail.com</span>
                   </li>
                 </ul>
               </div>
@@ -155,7 +161,6 @@ const JobDetails = () => {
           </div>
         </div>
       </div>
-      {/* Job Post Company End */}
     </>
   );
 };

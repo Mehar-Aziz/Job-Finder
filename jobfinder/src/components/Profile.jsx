@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import img from '../assets/images/author.png';
 
 const ProfilePage = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -44,8 +45,8 @@ const ProfilePage = () => {
               </div>
               <div className="card-body text-center">
                 <img
-                  src="img/avatars/avatar-4.jpg"
-                  alt="Christina Mason"
+                  src={img}
+                  alt="User Picture"
                   className="img-fluid rounded-circle mb-2"
                   width="128"
                   height="128"

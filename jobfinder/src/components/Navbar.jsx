@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-/*import logo from '../assets/images/logo.png'*/
-// Import FontAwesome icons
+import logo from '../assets/images/JobFinderLOgo.png';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
@@ -19,7 +18,7 @@ const Navbar = () => {
                         <div className="row align-items-center">
                             <div className="col-lg-3 col-md-2">
                                 <div className="logo">
-                                    {/*<img className="logo" src={logo} alt="Logo" />*/}
+                                    {<img className="logo" src={logo} alt="Logo" style={{width: 200, height:75}} />}
                                 </div>
                             </div>
                             <div className="col-lg-9 col-md-9">

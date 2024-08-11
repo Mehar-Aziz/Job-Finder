@@ -27,7 +27,7 @@ const AboutUs = () => {
           </div>
           <div className="col-xl-6 col-lg-6">
             <div className="support-location-img">
-              <img src={aboutImg} alt="" style={{ width: '500px', height: '650px' }}/>
+              <img src={aboutImg} alt="" style={{ width: '500px', height: '650px', paddingLeft: '20px' }}/>
               <div className="support-img-cap text-center">
                 <p>Since</p>
                 <span>1994</span>

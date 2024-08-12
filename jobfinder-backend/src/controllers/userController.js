@@ -5,7 +5,7 @@ import { validationResult } from 'express-validator';
 
 //registration
 
-exports.register = async (req, res) => {
+export const register = async (req, res) => {
     const errors = validationResult(req);
     if(!errors.isEmpty()){
         return res.status(400).json({ errors: errors.array() });

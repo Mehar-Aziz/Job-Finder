@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useEffect, useState }  from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -12,10 +12,29 @@ import LoginPage from "./pages/Login";
 import RegistrationForm from "./pages/Registration";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
+import AuthProvider from "./context/UserContext";
 
 
 function App() {
+  const [backendData, setBackendData] = useState([{}]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api") 
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        setBackendData(data);
+      })
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+      });
+  }, []);
   return(
+    <AuthProvider>
     <Router>
       <div>
         <Navbar />
@@ -35,6 +54,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </AuthProvider>
   )
 }
 export default App;

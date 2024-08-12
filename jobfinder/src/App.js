@@ -19,7 +19,7 @@ function App() {
   const [backendData, setBackendData] = useState([{}]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api") 
+    fetch("http://localhost:3000/api/users") 
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok ' + response.statusText);

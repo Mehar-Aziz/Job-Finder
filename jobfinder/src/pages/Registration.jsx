@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const RegistrationForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-  });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle registration logic here
-    console.log('Registering with', formData);
+    try {
+      await axios.post('http://localhost:3000/api/register' , { name , email, password });
+      alert('Registraion Successful!');
+    } catch (error) {
+      setError(error.response.data.message);
+    }
   };
 
   return (
@@ -32,8 +29,8 @@ const RegistrationForm = () => {
               type="text"
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               required
             />
           </div>
@@ -43,8 +40,8 @@ const RegistrationForm = () => {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              value={email}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
@@ -54,14 +51,15 @@ const RegistrationForm = () => {
               type="password"
               id="password"
               name="password"
-              value={formData.password}
-              onChange={handleChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
           <button type="submit" className="btn">Register</button>
         </form>
       </div>
+      {error && <p>{error}</p>}
     </div>
   );
 };

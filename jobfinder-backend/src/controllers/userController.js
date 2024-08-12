@@ -28,5 +28,4 @@ const createUser = async (req, res) => {
     }
 };
 
-export default getUser;
-export createUser;
+export { getUser, createUser };

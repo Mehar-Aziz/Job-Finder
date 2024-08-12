@@ -1,7 +1,7 @@
-import User from "../models/userModel";
+import User from "../models/userModel.js";
 
 //get all users
-const getUser = async (req, res) => {
+export const getUser = async (req, res) => {
     try {
         const users = await User.find();
         res.json(users);
@@ -11,7 +11,7 @@ const getUser = async (req, res) => {
 };
 
 //create a new user
-const createUser = async (req, res) => {
+export const createUser = async (req, res) => {
     const { name, email, password } = req.body;
 
     const newUser = new User({
@@ -28,4 +28,4 @@ const createUser = async (req, res) => {
     }
 };
 
-export { getUser, createUser };
+

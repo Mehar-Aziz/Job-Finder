@@ -1,30 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import axios from 'axios';
 import testimonialImage from '../assets/images/author.png'; 
 import '../scss/_testimonial.scss';
 
 const Testimonial = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Margaret Lawson',
-      position: 'Creative Director',
-      text: '“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”',
-    },
-    {
-      id: 2,
-      name: 'Margaret Lawson',
-      position: 'Creative Director',
-      text: '“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”',
-    },
-    {
-      id: 3,
-      name: 'Margaret Lawson',
-      position: 'Creative Director',
-      text: '“I am at an age where I just want to be fit and healthy our bodies are our responsibility! So start caring for your body and it will care for you. Eat clean it will care for you and workout hard.”',
-    },
-  ];
+  const [testimonials, setTestimonials] = useState([]);
 
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/api/testimonials');
+        setTestimonials(response.data);
+      } catch (error) {
+        console.error('Error fetching testimonials:', error);
+      }
+    };
+
+    fetchTestimonials();
+  }, []);
+  
   const settings = {
     dots: true,
     infinite: true,

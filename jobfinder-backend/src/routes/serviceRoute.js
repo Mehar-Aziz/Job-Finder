@@ -3,7 +3,7 @@ const router = express.Router();
 import Service from '../models/serviceSchema.js';
 
 //all service
-router.get('/services', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const services = await Service.find();
     res.json(services);
@@ -13,7 +13,7 @@ router.get('/services', async (req, res) => {
 });
 
 //new service
-router.post('/services', async (req, res) => {
+router.post('/', async (req, res) => {
   const service = new Service({
     icon: req.body.icon,
     label: req.body.label,

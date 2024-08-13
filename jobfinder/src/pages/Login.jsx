@@ -47,7 +47,7 @@ const LoginPage = () => {
             <div className='forgot'>Forgot Password?</div>
           </div>
           
-    <Link to='/dashboard'><button type="submit" className="btn" >Login</button></Link>
+   <button type="submit" className="btn" >Login</button>
   
         </form>
         {error && <p>{error}</p>}

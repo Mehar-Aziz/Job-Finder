@@ -1,5 +1,6 @@
 import React,{ useEffect, useState }  from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import axios from 'axios';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/home";
@@ -16,22 +17,25 @@ import AuthProvider from "./context/UserContext";
 
 
 function App() {
-  const [backendData, setBackendData] = useState([{}]);
+  const [usersData, setUsersData] = useState([]);
+  const [servicesData, setServicesData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/users") 
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-      })
-      .then(data => {
-        setBackendData(data);
-      })
-      .catch(error => {
+    const fetchData = async () => {
+      try {
+        const [usersResponse, servicesResponse] = await Promise.all([
+          axios.get("http://localhost:3000/api/users"),
+          axios.get("http://localhost:3000/api/services")
+        ]);
+
+        setUsersData(usersResponse.data);
+        setServicesData(servicesResponse.data);
+      } catch (error) {
         console.error('There has been a problem with your fetch operation:', error);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
   return(
     <AuthProvider>

@@ -1,4 +1,3 @@
-// src/components/Services.js
 import React from 'react';
 import OurServices from '../components/Services';
 import heroImage from '../assets/images/contact.jpg'

@@ -1,13 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 function ContactForm() {
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+  
+    try {
+      const response = await axios.post('/api/contact/submit', {
+        name,
+        email,
+        subject,
+        message,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (response.status === 200) {
+        console.log('Form submitted successfully');
+      } else {
+        console.log('Error submitting form');
+      }
+    } catch (error) {
+      console.log('Error submitting form:', error);
+    }
+  };
+  
   return (
     <div className="col-lg-8">
       <form
         className="form-contact contact_form"
-        action="contact_process.php"
-        method="post"
-        id="contactForm"
+        onSubmit={handleSubmit}  // Use onSubmit for the form element
         noValidate
       >
         <div className="row">
@@ -19,9 +48,10 @@ function ContactForm() {
                 id="message"
                 cols="30"
                 rows="9"
-                onFocus={(e) => (e.target.placeholder = '')}
-                onBlur={(e) => (e.target.placeholder = 'Enter Message')}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="Enter Message"
+                required
               />
             </div>
           </div>
@@ -32,8 +62,8 @@ function ContactForm() {
                 name="name"
                 id="name"
                 type="text"
-                onFocus={(e) => (e.target.placeholder = '')}
-                onBlur={(e) => (e.target.placeholder = 'Enter your name')}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
               />
             </div>
@@ -45,8 +75,8 @@ function ContactForm() {
                 name="email"
                 id="email"
                 type="email"
-                onFocus={(e) => (e.target.placeholder = '')}
-                onBlur={(e) => (e.target.placeholder = 'Enter email address')}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
               />
             </div>
@@ -58,8 +88,8 @@ function ContactForm() {
                 name="subject"
                 id="subject"
                 type="text"
-                onFocus={(e) => (e.target.placeholder = '')}
-                onBlur={(e) => (e.target.placeholder = 'Enter Subject')}
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
                 placeholder="Enter Subject"
               />
             </div>

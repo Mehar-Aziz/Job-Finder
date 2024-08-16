@@ -56,6 +56,11 @@ export const login = async (req, res) => {
 
 // Forgot Password Controller
 export const forgotPassword = async (req, res) => {
+    const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ message: 'Invalid email address.' });
+  }
+
     const { email } = req.body;
     
     try {
@@ -67,7 +72,7 @@ export const forgotPassword = async (req, res) => {
         // Generate a reset token
         const resetToken = crypto.randomBytes(32).toString('hex');
         user.resetToken = resetToken;
-        user.resetTokenExpiry = Date.now() + 3600000; y
+        user.resetTokenExpiry = Date.now() + 3600000; 
         await user.save();
 
         // Send email with reset token
@@ -86,7 +91,7 @@ export const forgotPassword = async (req, res) => {
             to: email,
             subject: 'Password Reset Request',
             text: `You requested a password reset.
-          Click the link to reset your password: http://localhost:3001/reset-password/${resetToken} /n If you have not requested, Kindlt ignore this email `,
+          Click the link to reset your password: http://localhost:3001/reset-password/${resetToken} /n If you have not requested, Kindly ignore this email `,
         };
 
         await transporter.sendMail(mailOptions);

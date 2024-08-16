@@ -1,5 +1,5 @@
 import express from 'express';
-import { register, login, forgotPassword } from '../controllers/userController.js';
+import { register, login, forgotPassword, resetPassword } from '../controllers/userController.js';
 import { body } from 'express-validator';
 
 const router = express.Router();
@@ -14,7 +14,9 @@ router.post('/registration', [
 //login
 router.post('/login', login);
 //forgetpasswrd
-router.post('/forgot-password', forgotPassword);
+router.post('/forgot-password',[
+    body('email').isEmail().withMessage('Valid email is required')
+], forgotPassword);
 //reset password
 router.post('/reset-password', resetPassword);
 

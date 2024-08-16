@@ -1,5 +1,5 @@
 import express from 'express';
-import { register, login } from '../controllers/userController.js';
+import { register, login, forgotPassword } from '../controllers/userController.js';
 import { body } from 'express-validator';
 
 const router = express.Router();
@@ -13,5 +13,7 @@ router.post('/registration', [
 
 //login
 router.post('/login', login);
+router.post('/forgot-password', forgotPassword);
+
 
 export default router;

@@ -13,7 +13,10 @@ router.post('/registration', [
 
 //login
 router.post('/login', login);
+//forgetpasswrd
 router.post('/forgot-password', forgotPassword);
+//reset password
+router.post('/reset-password', resetPassword);
 
 
 export default router;

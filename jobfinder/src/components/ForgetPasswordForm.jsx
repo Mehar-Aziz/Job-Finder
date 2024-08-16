@@ -17,7 +17,9 @@ const ForgotPassword = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="login-page">
+      <div className="login-container">
+    <form onSubmit={handleSubmit} className="form-group">
       <label htmlFor="email">Email:</label>
       <input
         type="email"
@@ -26,9 +28,13 @@ const ForgotPassword = () => {
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-      <button type="submit">Send Reset Link</button>
+      <br />
+      <br />
+      <button type="submit" className="btn">Send Reset Link</button>
       {message && <p>{message}</p>}
     </form>
+    </div>
+    </div>
   );
 };
 

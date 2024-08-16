@@ -5,6 +5,7 @@ import connectDB from './config/db.js';
 import userRoutes from './routes/userRoutes.js';
 import serviceRoutes from './routes/serviceRoute.js';
 import testimonialRoutes from './routes/testimonalRoutes.js';
+import contactRoutes from './routes/contactRoutes.js';
 
 dotenv.config();
 connectDB();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/users', userRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api', testimonialRoutes);
+app.use('/api/contact', contactRoutes);
 
 
 const PORT = 3000;

@@ -1,7 +1,8 @@
 import express from 'express';
-const router = express.Router();
-import contactController from '../controllers/contactController';
+import { submitContactForm } from '../controllers/contactController.js';
 
-router.post('/submit', contactController.submitContactForm);
+const router = express.Router();
+
+router.post('/submit', submitContactForm);
 
 export default router

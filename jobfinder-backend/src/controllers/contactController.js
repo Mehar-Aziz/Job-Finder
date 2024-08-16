@@ -1,4 +1,4 @@
-import Contact from '../models/contactSchema';
+import Contact from '../models/contactSchema.js';
 import nodemailer from 'nodemailer';
 
 export const submitContactForm = async (req, res) => {
@@ -20,7 +20,7 @@ export const submitContactForm = async (req, res) => {
       from: process.env.EMAIL_USER, 
       to: req.body.email,           
       subject: 'Thank you for contacting us!',
-      text: `Dear ${req.body.name},\n\nThank you for reaching out. We have received your message and will get back to you soon.\n\nBest regards,\nThe Team`,
+      text: `Dear ${req.body.name},\n\nThank you for reaching out. We have received your message and will get back to you soon.\n\nBest regards,\nJob Finder Team`,
     };
 
     await transporter.sendMail(mailOptions);
@@ -31,3 +31,4 @@ export const submitContactForm = async (req, res) => {
     res.status(500).json({ error: 'Error submitting contact form' });
   }
 };
+

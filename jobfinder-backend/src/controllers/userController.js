@@ -105,9 +105,16 @@ export const forgotPassword = async (req, res) => {
 // Reset Password Controller
 export const resetPassword = async (req, res) => {
     const { token, newPassword } = req.body;
-    
+    console.log('Received token:', token);
+
     try {
         const user = await User.findOne({ resetToken: token, resetTokenExpiry: { $gt: Date.now() } });
+        console.log('Found user:', user);
+        if (user) {
+            console.log('Reset token in DB:', user.resetToken);
+            console.log('Reset token expiry:', user.resetTokenExpiry);
+            console.log('Current time:', new Date());
+          }
         if (!user) {
             return res.status(400).json({ message: 'Invalid or expired token' });
         }
@@ -121,6 +128,7 @@ export const resetPassword = async (req, res) => {
 
         res.status(200).json({ message: 'Password reset successful' });
     } catch (error) {
+        console.error('Reset password error:', error);
         res.status(500).json({ message: 'Server error' });
     }
 };

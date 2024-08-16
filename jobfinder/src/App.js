@@ -14,7 +14,8 @@ import RegistrationForm from "./pages/Registration";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import AuthProvider from "./context/UserContext";
-import ForgotPassword from "./pages/ForgetPassword";
+import ResetPasswordpage from "./pages/ResetPassword";
+import ForgotPasswordpage from "./pages/ForgetPassword";
 
 
 function App() {
@@ -46,7 +47,8 @@ function App() {
         <Routes>
           <Route path="/" exact Component={Home}  />
           <Route path="/login" Component={LoginPage} />
-          <Route path="/forgot-password" Component={ForgotPassword} />
+          <Route path="/forgot-password" Component={ForgotPasswordpage} />
+          <Route path="/reset-password" Component={ResetPasswordpage} />
           <Route path="/dashboard" Component={Dashboard} />
           <Route path="/profile" Component={Profile} />
           <Route path="/registration" Component={RegistrationForm} />

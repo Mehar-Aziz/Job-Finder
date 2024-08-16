@@ -2,7 +2,7 @@ import React from 'react';
 import ForgotPassword from '../components/ForgetPasswordForm';
 import heroImage from '../assets/images/contact.jpg'
 
-const ForgotPassword = () => {
+const ForgotPasswordpage = () => {
   return (
     <>
     {/* Hero Area Start */}
@@ -27,4 +27,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword ;
+export default ForgotPasswordpage ;

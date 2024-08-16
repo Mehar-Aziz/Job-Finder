@@ -2,7 +2,7 @@ import React from 'react';
 import ResetPassword from '../components/ResetPasswordForm';
 import heroImage from '../assets/images/contact.jpg'
 
-const ResetPassword = () => {
+const ResetPasswordpage = () => {
   return (
     <>
     {/* Hero Area Start */}
@@ -27,4 +27,4 @@ const ResetPassword = () => {
   );
 };
 
-export default ResetPassword ;
+export default ResetPasswordpage ;

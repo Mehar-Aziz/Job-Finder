@@ -1,19 +1,22 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import img from '../assets/images/author.png';
 
 const ProfilePage = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [profile, setProfile] = useState({
-    name: "MEHAR AZIZ",
-    role: "MERN Stack Developer",
-    skills: ["HTML", "JavaScript", "Sass", "Angular", "Vue", "React", "Redux", "UI", "UX"],
+    name: "",
+    role: "",
+    skills: [],
     about: {
-      location: "Lahore, Pakistan",
-      work: "InternnCarft",
-      from: "Pakistan"
+      location: "",
+      work: "",
+      from: ""
     },
-    elsewhere: ["GitHub", "Twitter", "Facebook", "Instagram", "LinkedIn"]
+    elsewhere: []
   });
+
+
 
   const handleEdit = () => {
     setIsEditing(true);

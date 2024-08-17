@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -7,16 +8,24 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [token, setToken] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await axios.post(`http://localhost:3000/api/users/login`, { email, password });
+      console.log('API Response:', response.data);
+      console.log('Name from API:', response.data.name);
       setToken(response.data.token);
       localStorage.setItem('token', response.data.token);
+      localStorage.setItem('name', response.data.name);
+      console.log('Name set in localStorage:', localStorage.getItem('name'));
+      window.dispatchEvent(new Event('userLoggedIn'));
       alert('Login successful');
+      navigate('/dashboard');
     } catch (error) {
-      setError(error.response.data.message);
+      console.error('Login error:', error);
+    setError(error.response?.data?.message || 'An error occurred');
     }
   };
 

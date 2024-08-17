@@ -2,7 +2,7 @@ import React from 'react';
 import NotificationDropdown from './Notification';
 import { Link } from 'react-router-dom';
 
-function Sidebar() {
+function Sidebar( {id}) {
   return (
     <nav id="sidebar" className="sidebar js-sidebar">
       <div className="sidebar-content js-simplebar">
@@ -19,7 +19,7 @@ function Sidebar() {
           <li className="sidebar-item">
             <a className="sidebar-link" href="pages-profile.html">
               <i className="align-middle" data-feather="user"></i> 
-              <Link to="/profile"><span className="align-middle" style={{ color: 'white', textDecoration: 'none' }} >Profile</span></Link>
+              <Link to={`/profile/${id}`}><span className="align-middle" style={{ color: 'white', textDecoration: 'none' }} >Profile</span></Link>
             </a>
           </li>
           <NotificationDropdown/>

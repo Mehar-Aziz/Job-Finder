@@ -1,8 +1,8 @@
-import User from "../models/profileSchema";
+import Profile from "../models/profileSchema";
 
 export const getProfile = async (req, res) => {
   try {
-    const user = await User.findById(req.params.userId);
+    const user = await Profile.findById(req.params.userId);
     if (!user) return res.status(404).json({ message: 'User not found' });
     res.json(user);
   } catch (error) {
@@ -12,7 +12,7 @@ export const getProfile = async (req, res) => {
 
 export const updateProfile = async (req, res) => {
   try {
-    const user = await User.findByIdAndUpdate(req.params.userId, req.body, { new: true });
+    const user = await Profile.findByIdAndUpdate(req.params.userId, req.body, { new: true });
     if (!user) return res.status(404).json({ message: 'User not found' });
     res.json(user);
   } catch (error) {

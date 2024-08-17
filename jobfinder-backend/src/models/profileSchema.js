@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
+const profileSchema = new mongoose.Schema({
   name: String,
   role: String,
   skills: [String],
@@ -12,6 +12,6 @@ const userSchema = new mongoose.Schema({
   elsewhere: [String]
 });
 
-const User  = mongoose.model('User', userSchema);
+const Profile  = mongoose.model('Profile', profileSchema);
 
-export default User;
+export default Profile;

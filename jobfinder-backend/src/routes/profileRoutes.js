@@ -3,7 +3,7 @@ import { getUserProfile, updateUserProfile } from '../controllers/profileControl
 
 const router = express.Router();
 
-
+// Corrected route paths
 router.get('/profile/:id', getUserProfile);
 router.put('/profile/:id', updateUserProfile);
 

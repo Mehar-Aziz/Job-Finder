@@ -1,4 +1,4 @@
-import Profile from "../models/profileSchema";
+import Profile from "../models/profileSchema.js";
 
 export const getUserProfile = async (req, res) => {
     try {

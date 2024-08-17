@@ -1,30 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import img from '../assets/images/author.png';
+import { useParams } from "react-router-dom";
 
 const ProfilePage = () => {
+  const { id } = useParams();
   const [isEditing, setIsEditing] = useState(false);
-  const [profile, setProfile] = useState({
-    name: "",
-    role: "",
-    skills: [],
-    about: {
-      location: "",
-      work: "",
-      from: ""
-    },
-    elsewhere: []
-  });
+  const [profile, setProfile] = useState({});
 
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const res = await axios.get(`/api/profile/${id}`);
+        setProfile(res.data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
 
+    fetchProfile();
+  }, [id]);
 
   const handleEdit = () => {
     setIsEditing(true);
   };
 
-  const handleSave = () => {
-    setIsEditing(false);
+  const handleSave = async () => {
+    try {
+      await axios.put(`/api/users/${id}`, profile);
+      setIsEditing(false);
+    } catch (error) {
+      console.error("Error saving profile:", error);
+    }
   };
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -34,11 +43,11 @@ const ProfilePage = () => {
     }));
   };
 
+  if (!profile) return <div>Loading...</div>;
+
   return (
     <main className="content-profile">
       <div className="container-fluid">
-        <div className="mb-3">
-        </div>
         <div className="row">
           {/* Profile Details Card */}
           <div className="col-md-4 col-xl-3">

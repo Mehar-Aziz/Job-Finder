@@ -50,7 +50,7 @@ function App() {
           <Route path="/forgot-password" Component={ForgotPasswordpage} />
           <Route path="/reset-password/:token" Component={ResetPasswordpage} />
           <Route path="/dashboard" Component={Dashboard} />
-          <Route path="/profile" Component={Profile} />
+          <Route path="/profile/:id" Component={Profile} />
           <Route path="/registration" Component={RegistrationForm} />
           <Route path="/contact" Component={Contact}  />
           <Route path="/about" Component={AboutPage}  />

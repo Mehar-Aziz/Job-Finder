@@ -1,43 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import logo from '../assets/images/JobFinderLOgo.png';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/UserContext.js'; // Import AuthContext
 
 const Navbar = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [name, setName] = useState(null);
+  const { auth, setAuth } = useContext(AuthContext); // Get auth and setAuth from AuthContext
   const navigate = useNavigate();
 
   useEffect(() => {
-    const storedName = localStorage.getItem('name');
-    if (storedName) {
-      setName(storedName);
-    }
-    setIsLoading(false);
-
-    const handleUserLogin = () => {
-      const updatedName = localStorage.getItem('name');
-      if (updatedName) {
-        setName(updatedName);
-      }
-    };
-
-    window.addEventListener('userLoggedIn', handleUserLogin);
-
-    return () => {
-      window.removeEventListener('userLoggedIn', handleUserLogin);
-    };
+    
   }, []);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
 
   const handleLogout = () => {
     localStorage.removeItem('token');
-    localStorage.removeItem('name');
-    setName(null);
+    setAuth(null); 
     navigate('/');
   };
 
@@ -70,9 +48,9 @@ const Navbar = () => {
                     </nav>
                   </div>
                   <div className="header-btn d-none f-right d-lg-block">
-                    {name ? (
+                    {auth ? (
                       <>
-                        <span className="btn head-btn2">{name}</span>
+                        <span className="btn head-btn2">{auth.name}</span>
                         <button onClick={handleLogout} className="btn head-btn1">Logout</button>
                       </>
                     ) : (
@@ -98,9 +76,9 @@ const Navbar = () => {
                       <li><Link to="/contact">Contact</Link></li>
                     </ul>
                     <div className="header-btn">
-                      {name ? (
+                      {auth ? (
                         <>
-                          <span className="btn head-btn2">{name}</span>
+                          <span className="btn head-btn2">{auth.name}</span>
                           <button onClick={handleLogout} className="btn head-btn1">Logout</button>
                         </>
                       ) : (

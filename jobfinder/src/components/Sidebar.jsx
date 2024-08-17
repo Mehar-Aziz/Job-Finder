@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import NotificationDropdown from './Notification';
+import { AuthContext } from '../context/UserContext.js';
 import { Link } from 'react-router-dom';
 
-function Sidebar( {id}) {
+function Sidebar() {
+  const { userID } = useContext(AuthContext);
+ 
+
   return (
     <nav id="sidebar" className="sidebar js-sidebar">
       <div className="sidebar-content js-simplebar">
@@ -16,11 +20,11 @@ function Sidebar( {id}) {
             </a>
           </li>
 
-          <li className="sidebar-item">
-            <a className="sidebar-link" href="pages-profile.html">
+          <li className="sidebar-item sidebar-link">
+            
               <i className="align-middle" data-feather="user"></i> 
-              <Link to={`/profile/${id}`}><span className="align-middle" style={{ color: 'white', textDecoration: 'none' }} >Profile</span></Link>
-            </a>
+              <Link to={`/profile/${userID}`}><span className="align-middle" style={{ color: 'white', textDecoration: 'none' }} >Profile</span></Link>
+            
           </li>
           <NotificationDropdown/>
         </ul>

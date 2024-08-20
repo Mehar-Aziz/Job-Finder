@@ -111,8 +111,8 @@ Make sure you have the following installed:
 
 ## Usage
 
-1. **Front-End**: Access the application at `http://localhost:3000` after starting the development server.
-2. **Back-End**: The backend server will run on `http://localhost:5000` by default. Ensure both servers are running to use the full application.
+1. **Front-End**: Access the application at `http://localhost:3001` after starting the development server.
+2. **Back-End**: The backend server will run on `http://localhost:3000` by default. Ensure both servers are running to use the full application.
 
 ## Folder Structure
 

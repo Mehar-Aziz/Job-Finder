@@ -2,6 +2,8 @@
 
 Job Finder is a web application designed to simplify the job search and recruitment process. It provides job seekers with an easy-to-use platform to find job openings, while also allowing companies to post vacancies, manage applications, and promote their services.
 
+![Job Finder Screenshot](Screenshot 2024-08-18 133052.png)
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
